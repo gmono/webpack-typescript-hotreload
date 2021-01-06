@@ -107,8 +107,12 @@ class Scene extends Component<SceneProps>{
   }
 }
 
-// ChildProp  自动赋值 把其中的
-function ChildProp(props: {packComponent:JSX.Element, children?: JSX.Element[] }) {
+// Child组件 放在ChildContext中 用于包装内部元素
+function Child(props:{children:JSX.Element}) {
+  
+}
+//   自动赋值 把其中的
+function ChildContext(props: {packComponent:JSX.Element, children?: JSX.Element[] }) {
   const { children } = props;
   if (children != null) {
     // 这里过滤出一组 Child组件实例，获取其中的name字段 然后把它们的直接子元素设为 packComponent的props中的对应字段的值

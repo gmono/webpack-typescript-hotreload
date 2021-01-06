@@ -237,7 +237,7 @@
         "affectsGlobalScope": false
       },
       "./src/index.tsx": {
-        "version": "4b47bd98eb1d461b8e0cadaaec8f06a1aaf48f257baf2c9f44b0cdab4f188c1e",
+        "version": "e5385076531d7c6d1196a4208ed284c9ea7710cbf6d1d01edeb5c7edc8ee7cc7",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
         "affectsGlobalScope": false
       },
