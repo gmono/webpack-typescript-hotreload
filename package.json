@@ -1,0 +1,23 @@
+{
+  "name": "native-layout",
+  "scripts": {
+    "dev": "webpack-dev-server --open "
+  },
+  "dependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "mathjs": "^8.1.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "ts-metacode": "^1.4.2",
+    "ts-pystyle": "^1.4.4",
+    "typescript": "^4.1.3"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^4.4.1",
+    "ts-loader": "^8.0.3",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
