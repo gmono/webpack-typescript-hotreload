@@ -231,8 +231,13 @@
         "signature": "5e7837730e7ef63981cbd8d878388c4b37acc70dc3190881e230a23e3b4f9514",
         "affectsGlobalScope": false
       },
+      "./node_modules/typescript/lib/typescript.d.ts": {
+        "version": "e219a21f5ad8412f7123ea70e59e1287e7fca5c41157be496847f7959fc1e0c4",
+        "signature": "e219a21f5ad8412f7123ea70e59e1287e7fca5c41157be496847f7959fc1e0c4",
+        "affectsGlobalScope": false
+      },
       "./src/index.tsx": {
-        "version": "3033c86927eb82ccf703df4896c43ea977457e9739d03973a732d65e4b4b464c",
+        "version": "4b47bd98eb1d461b8e0cadaaec8f06a1aaf48f257baf2c9f44b0cdab4f188c1e",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
         "affectsGlobalScope": false
       },
@@ -846,7 +851,8 @@
       ],
       "./src/index.tsx": [
         "./node_modules/@types/react-dom/index.d.ts",
-        "./node_modules/@types/react/index.d.ts"
+        "./node_modules/@types/react/index.d.ts",
+        "./node_modules/typescript/lib/typescript.d.ts"
       ]
     },
     "exportedModulesMap": {
@@ -1205,19 +1211,8 @@
       "./node_modules/@types/webpack-sources/lib/sourcemapsource.d.ts",
       "./node_modules/@types/webpack-sources/node_modules/source-map/source-map.d.ts",
       "./node_modules/csstype/index.d.ts",
-      [
-        "./src/index.tsx",
-        [
-          {
-            "file": "./src/index.tsx",
-            "start": 1002,
-            "length": 5,
-            "code": 2739,
-            "category": 1,
-            "messageText": "Type '{ BackLayer: Element; Content: Element; FrontLayer: Element; }' is missing the following properties from type 'SceneProps': style, className"
-          }
-        ]
-      ]
+      "./node_modules/typescript/lib/typescript.d.ts",
+      "./src/index.tsx"
     ],
     "affectedFilesPendingEmit": [
       [
@@ -1590,6 +1585,10 @@
       ],
       [
         "./node_modules/typescript-tuple/lib/utils.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript/lib/typescript.d.ts",
         1
       ],
       [
