@@ -236,9 +236,19 @@
         "signature": "5eec5df7493ec6ad30cd641228d5ec7a5cc46d86e04a7f5d4f3cc239c6fa05bc",
         "affectsGlobalScope": true
       },
+      "./src/childcontext.tsx": {
+        "version": "ca70b1389df0a7fd3369b44a76d4c6c92ab323420219fc0e0f590ceb854e39d1",
+        "signature": "122b04b46b024ddacbf19994edd567ac03e719576bdc33933b0a5ff23aeb6397",
+        "affectsGlobalScope": false
+      },
+      "./src/scene.tsx": {
+        "version": "7c0366e575da5c3bf359f5e0524b2ca57d92b1d1560a52481a13c41787a71a98",
+        "signature": "1c7344872648d2ae828e590146a1455e7a3104b5cbef91f29c7c1434f85e8931",
+        "affectsGlobalScope": false
+      },
       "./src/index.tsx": {
-        "version": "719a014f3e2f48bc68cd983cd71204b3915e78325905bbca9942f3b3a024f1ec",
-        "signature": "2a0a847bd3a58b3bc10e08cf97707ab492f98f326b8a6a35da71c51314fe30b2",
+        "version": "95ab30d6067b3c7ca8329fd7294267fb20146f92361915f5c929b41220d8efcf",
+        "signature": "089301879a6f597ae4757c2f668153bf0630d70fe382bba360c115d15a8c66e8",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/react-dom/index.d.ts": {
@@ -887,7 +897,14 @@
         "./node_modules/@types/webpack-sources/index.d.ts",
         "./node_modules/source-map/source-map.d.ts"
       ],
+      "./src/childcontext.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
       "./src/index.tsx": [
+        "./src/childcontext.tsx",
+        "./src/scene.tsx"
+      ],
+      "./src/scene.tsx": [
         "./node_modules/@types/react/index.d.ts"
       ],
       "./src/test.tsx": [
@@ -1163,7 +1180,14 @@
         "./node_modules/@types/webpack-sources/index.d.ts",
         "./node_modules/source-map/source-map.d.ts"
       ],
+      "./src/childcontext.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
       "./src/index.tsx": [
+        "./src/childcontext.tsx",
+        "./src/scene.tsx"
+      ],
+      "./src/scene.tsx": [
         "./node_modules/@types/react/index.d.ts"
       ]
     },
@@ -1286,7 +1310,9 @@
       "./node_modules/csstype/index.d.ts",
       "./node_modules/source-map/source-map.d.ts",
       "./node_modules/typescript/lib/typescript.d.ts",
+      "./src/childcontext.tsx",
       "./src/index.tsx",
+      "./src/scene.tsx",
       "./src/test.tsx"
     ]
   },
