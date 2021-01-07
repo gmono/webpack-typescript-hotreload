@@ -1,6 +1,7 @@
 dist
-node_modules
+**/node_modules/*
 .vscode
 *.ps1
 webpack.config.js
 *.tsx
+*.html
