@@ -232,8 +232,8 @@
         "affectsGlobalScope": false
       },
       "./src/scene.tsx": {
-        "version": "e7f7a28fdf6def18d83a896d2447b8491771555662e53844e8ac1bf8bee3eba8",
-        "signature": "3bc771149a0908d7dda822bca59985de553069a826f72e1bf77091cf45f4f754",
+        "version": "e7e0f9dacd490bd4f67615c65084d872e48046ff45c3a6cfafe7e8135bc4fd17",
+        "signature": "345fde575998028956cfe03dd4ca1e3dc182a13df199b351f0db54640b0d88d6",
         "affectsGlobalScope": false
       },
       "./src/index.tsx": {
@@ -252,7 +252,7 @@
         "affectsGlobalScope": false
       },
       "./src/test.tsx": {
-        "version": "5e5b2a09d233649a680da673098abde6e48a304e14ebd9b1f4ad135872f3f232",
+        "version": "0a86ab1f2cdf364a4d92c836b5b98ab80c706fb37fe19ab54100d5dd16dc9a9a",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
         "affectsGlobalScope": false
       },

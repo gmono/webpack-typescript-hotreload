@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactNode, Component, ReactElement } from "react";
+import React, { CSSProperties, ReactNode, Component, ReactElement, PureComponent } from "react";
 import { Child, ChildContext } from "./ChildContext";
 
 export interface SceneProps {
@@ -105,13 +105,33 @@ export class Scene extends Component<SceneProps>{
   }
 }
 
-export const BackLayer = (props: { children: ReactElement }) => <Child name="BackLayer">{ props.children}</Child>
-export const FrontLayer = (props: { children: ReactElement }) => <Child name="FrontLayer">{props.children}</Child>
-export const Content = (props: { children: ReactElement }) => <Child name="Content">{ props.children}</Child>
-export function Control(props:{children:any}) {
+function LayerFac(name:string) {
+  return class extends PureComponent<{ children: ReactElement }>{
+    public constructor(props) {
+      super(props)
+    }
+    get Name() {
+      return name;
+    }
+    // 这个函数只是用来获取element的
+    render() {
+      return <Child key={name} name={ name}>{ this.props.children}</Child>
+    }
+  }
+}
+function ensureList<T>(objorarr: T | T[]) {
+  if (objorarr instanceof Array) return objorarr;
+  return [objorarr];
+}
+type RTType = ReturnType<typeof LayerFac>;
+type RTTypeEle = ReactElement<any, RTType>;
+export const BackLayer = LayerFac("BackLayer");
+export const FrontLayer = LayerFac("FrontLayer");
+export const Content = LayerFac("Content");
+export function Window(props: { height?: number | string; width?: number | string;children:RTTypeEle[]|RTTypeEle}) {
   return (
-    <ChildContext packComponent={<Scene FrontLayer={<div></div> } BackLayer={<div></div> } Content={<div></div> }></Scene>}>
-      {props.children}
+    <ChildContext packComponent={<Scene height={props.height} width={props.width} FrontLayer={<div></div> } BackLayer={<div></div> } Content={<div></div> }></Scene>}>
+      {ensureList(props.children).map(v=>(new v.type(v.props)).render())}
     </ChildContext>
   )
 }
