@@ -1,9 +1,9 @@
 # 说明
-
-模板:
-
-源文件格式tsx
-
-处理流程 tsx->js->webpack
-
-webpack 自带热加载，输出目录 dist 源文件目录 src ，使用ts-loader 加载
+React-Windows
+## Scene组件
+三层容器组件，前景，内容，背景  
+其中
+* 前景背景没有鼠标事件
+* 内容接受鼠标事件
+* 三层都是单一的Element，通过属性指定
+* 通过Control组件（对Scene的封装）

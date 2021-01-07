@@ -2,6 +2,7 @@ import React, { ReactElement } from "react";
 import ReactDOM from "react-dom"
 import { isThisTypeNode, JsxEmit } from "typescript";
 import { ChildContext, Child } from ".";
+import { Content, Control, Scene } from "./Scene";
 function PPP(props: { a?: ReactElement, b?: ReactElement }) {
   return <div>
     first:
@@ -12,11 +13,11 @@ function PPP(props: { a?: ReactElement, b?: ReactElement }) {
 }
 
 const t = (
-  <ChildContext packComponent={<PPP></PPP>}>
-    <Child name="a">
-      <div style={{background:"red"}}>hello world</div>
+  <ChildContext packComponent={<Scene FrontLayer={<div></div> } BackLayer={<div></div> } Content={<div></div> }></Scene>}>
+    <Child name="Content">
+      <div style={{background:"rgba(100,0,100,0.2)"}}>hello world</div>
     </Child>
-    <Child name="b">
+    <Child name="BackLayer">
       <div style={{background:"green"}}>
         测试
       </div>
@@ -24,6 +25,15 @@ const t = (
   </ChildContext>
 )
 
+const tt = (
+  <Control>
+    <Content>
+      <div>
+        helloworld
+      </div>
+    </Content>
+  </Control>
+)
 
 const ttt = {
   height: "100%",

@@ -1,4 +1,5 @@
-import React, { CSSProperties, ReactNode, Component } from "react";
+import React, { CSSProperties, ReactNode, Component, ReactElement } from "react";
+import { Child, ChildContext } from "./ChildContext";
 
 export interface SceneProps {
   FrontLayer: any;
@@ -102,4 +103,15 @@ export class Scene extends Component<SceneProps>{
 
     )
   }
+}
+
+export const BackLayer = (props: { children: ReactElement }) => <Child name="BackLayer">{ props.children}</Child>
+export const FrontLayer = (props: { children: ReactElement }) => <Child name="FrontLayer">{props.children}</Child>
+export const Content = (props: { children: ReactElement }) => <Child name="Content">{ props.children}</Child>
+export function Control(props:{children:any}) {
+  return (
+    <ChildContext packComponent={<Scene FrontLayer={<div></div> } BackLayer={<div></div> } Content={<div></div> }></Scene>}>
+      {props.children}
+    </ChildContext>
+  )
 }

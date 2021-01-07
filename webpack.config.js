@@ -2,7 +2,7 @@ const path = require('path');
 const wp=require("webpack");
 const html=require("html-webpack-plugin")
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: "./src/test.tsx",
   mode:"development",
   devtool: 'inline-source-map',
   devServer: {
